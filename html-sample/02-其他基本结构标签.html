@@ -1,0 +1,29 @@
+<!--
+  <!DOCTYPE>文档类型声明，作用就是告诉浏览器使用哪种HTML版本来显示网页。
+  如<!DOCTYPE html>，则代表当前页面采取的是 HTML5 版本来显示网页
+  注意:
+    1. <!DOCTYPE>声明位于文档中的最前面的位置，处于 `<html>` 标签之前。
+    2. <!DOCTYPE>不是一个 HTML 标签，它就是文档类型声明标签。
+-->
+<!DOCTYPE html>
+<!--
+  lang="xx"用来定义当前文档显示的语言。
+    en定义语言为英语；zh-CN定义语言为中文
+    其实对于文档显示来说，定义成en的文档也可以显示中文，定义成zh-CN的文档也可以显示英文
+    这个属性对浏览器和搜索引擎(百度.谷歌等)还是有作用的
+ -->
+<html lang="en">
+<head>
+  <!--
+    字符集(Character set)是多个字符的集合。以便计算机能够识别和存储各种文字。
+    charset 常用的值有：GB2312 、BIG5 、GBK 和 UTF-8，其中 UTF-8 也被称为万国码，基本包含了全世界所有国家需要用到的字符.
+    注意：<meta charset="UTF-8">是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用"UTF-8"编码，尽量统一写成标准的 "UTF-8"，不要写成 "utf8" 或 "UTF8"。
+   -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>其他基本结构标签示例</title>
+</head>
+<body>
+  !DOCTYPE/lang语言/字符集
+</body>
+</html>
