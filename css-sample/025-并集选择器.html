@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>复合选择器-并集选择器</title>
+    <style>
+      /* 要求1: 请把熊大和熊二改为粉色 */
+      /* div,
+        p {
+            color: pink;
+        } */
+
+      /* 要求2: 请把熊大和熊二改为粉色 还有 小猪一家改为粉色 */
+      /*
+        任何形式的选择器都可以作为并集选择器的一部分
+        约定的语法规范，并集选择器一般竖着写，需要注意：最后一个选择器不需要加逗号
+       */
+      div,
+      p,
+      .pig li {
+        color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul class="pig">
+      <li>小猪佩奇</li>
+      <li>猪爸爸</li>
+      <li>猪妈妈</li>
+    </ul>
+  </body>
+</html>

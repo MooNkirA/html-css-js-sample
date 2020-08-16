@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>复合选择器-子元素选择器</title>
+    <style>
+      /* 选择类名叫nav的div的子元素<a>标签，不会选择<p>标签内的孙级元素<a>标签 */
+      .nav > a {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <a href="#">我是儿子</a>
+      <p>
+        <a href="#">我是孙子</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>外边距合并-相邻块级元素垂直外边距合并</title>
+    <style>
+      .damao,
+      .ermao {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      /*
+        这两个盒子之间的垂直间距不是margin-bottom与margin-top之和，而是两者中的较大者的值。这种现象被称为相邻块元素垂直外边距的合并（也称外边距塌陷）
+        解决方案是：尽量只给一个盒子添加 margin 值
+       */
+      .damao {
+        margin-bottom: 100px;
+      }
+      .ermao {
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+  </body>
+</html>
