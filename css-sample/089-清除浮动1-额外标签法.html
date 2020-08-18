@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>清除浮动-额外标签法</title>
+    <style>
+      .box {
+        width: 800px;
+        border: 1px solid blue;
+        margin: 0 auto;
+      }
+
+      .damao {
+        float: left;
+        width: 300px;
+        height: 200px;
+        background-color: purple;
+      }
+
+      .ermao {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+
+      .footer {
+        height: 200px;
+        background-color: black;
+      }
+      /* 定义清除浮动的属性样式，用一个空元素标签调用即可 */
+      .clear {
+        clear: both; /* 清除浮动的影响 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="damao">大毛</div>
+      <div class="ermao">二毛</div>
+      <div class="ermao">二毛</div>
+      <div class="ermao">二毛</div>
+      <div class="ermao">二毛</div>
+      <!-- 在浮动盒子的后面添加一个空盒子，引用清除浮动的样式 -->
+      <!-- <div class="clear"></div> -->
+      <!-- 这个新增的盒子要求必须是块级元素不能是行内元素 -->
+      <span class="clear"></span>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>

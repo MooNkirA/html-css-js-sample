@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>为什么需要清除浮动</title>
+    <style>
+      /*
+        因为子元素的数量不确定，父级元素一般不方便定死高度，希望子元素将父盒子撑开
+        但如果子元素都设置浮动后，都脱离标准流，导致父元素高度为0，从而会影响后面标准流盒子的排版
+      */
+      .box {
+        width: 800px;
+        border: 1px solid blue;
+        margin: 0 auto;
+      }
+
+      .damao {
+        float: left;
+        width: 300px;
+        height: 200px;
+        background-color: purple;
+      }
+
+      .ermao {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+
+      .footer {
+        height: 200px;
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="damao">大毛</div>
+      <div class="ermao">二毛</div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
