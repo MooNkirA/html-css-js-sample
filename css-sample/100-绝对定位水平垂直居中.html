@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>绝对定位水平垂直居中</title>
+    <style>
+      .box {
+        position: absolute;
+        /* 实现水平居中 */
+        /* 1. left 偏移 50% 父容器宽度的一半 */
+        left: 50%;
+        /* 2. margin 负值 往左边偏移自己盒子宽度的一半 */
+        margin-left: -100px;
+
+        /* 实现垂直居中 */
+        /* 1. top 偏移 50% 父容器高度的一半 */
+        top: 50%;
+        /* 2. margin 负值 往上边偏移自己盒子高度的一半 */
+        margin-top: -100px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* 设置绝对定位后，margin: auto;不能实现水平居中的效果 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
