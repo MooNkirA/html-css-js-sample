@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>图片底侧空白缝隙解决方案</title>
+    <style>
+      div {
+        border: 2px solid red;
+      }
+      img {
+        /* 方法1：给img元素 vertical-align: middle | top; 让图片不要和基线对齐 */
+        vertical-align: middle;
+
+        /* 方法2：给img元素添加转换为块级元素 */
+        /* display: block; */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="images/emoji.jpg" alt="" />
+    </div>
+  </body>
+</html>
