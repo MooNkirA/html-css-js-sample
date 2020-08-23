@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 1. 构造函数的问题.
+      function Star(uname, age) {
+        this.uname = uname
+        this.age = age
+        // 直接定义到构造函数上的函数，会造成浪费内存空间的问题
+        /* this.sing = function () {
+          console.log("我会唱歌")
+        } */
+      }
+      /*
+        2. 一般情况下，的公共属性定义到构造函数里面, 公共的方法放到原型对象身上
+            这样可以使所有实例都共享这些公共的方法，节省内存空间
+      */
+      Star.prototype.sing = function () {
+        console.log("我会唱歌")
+      }
+      var shiyuan = new Star("石原里美", 18)
+      var jieye = new Star("新垣结衣", 20)
+      console.log(shiyuan.sing === jieye.sing)
+      console.dir(Star); // 通过输入到控制台可以看到构造函数中的prototype属性对象
+      shiyuan.sing()
+      jieye.sing()
+    </script>
+  </body>
+</html>
