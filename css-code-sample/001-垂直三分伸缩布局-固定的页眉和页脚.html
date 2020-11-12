@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>垂直三分伸缩布局-固定的页眉和页脚</title>
+    <style>
+      body {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto 1fr auto;
+        font-family: system-ui, sans-serif;
+      }
+
+      header {
+        background: lightpink;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      main {
+        background: coral;
+      }
+
+      footer {
+        background: wheat;
+        padding: 2rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Header Content</h1></header>
+    <main>Main Content</main>
+    <footer>Footer Content</footer>
+  </body>
+</html>
