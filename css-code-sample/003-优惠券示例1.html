@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>优惠券</title>
+    <style type="text/css">
+      .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .coupon-list {
+        /* width: 710px; */
+        margin: 0 auto;
+      }
+
+      /* .coupon-list .item:first-child {
+        margin-top: 20rpx;
+      }
+
+      .coupon-list .item {
+        width: 710rpx;
+        height: 250rpx;
+        margin-bottom: 20rpx;
+        display: flex;
+        justify-content: space-between;
+      } */
+
+      .wrapper {
+        display: flex;
+        position: relative;
+        width: 320px;
+        height: 100px;
+        margin: auto;
+        filter: drop-shadow(2px 2px 3px #999);
+        margin-bottom: 1rem;
+      }
+      .left {
+        background: #58a;
+        background: radial-gradient(
+              circle at top right,
+              transparent 5px,
+              #44c9a1 0
+            )
+            top right,
+          radial-gradient(circle at bottom right, transparent 5px, #44c9a1 0)
+            bottom right;
+        background-size: 100% 60%;
+        background-repeat: no-repeat;
+        color: white;
+        width: 70%;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .right {
+        background: #58a;
+        background: radial-gradient(
+              circle at top left,
+              transparent 5px,
+              #44c9a1 0
+            )
+            top left,
+          radial-gradient(circle at bottom left, transparent 5px, #44c9a1 0)
+            bottom left;
+        background-size: 100% 60%;
+        background-repeat: no-repeat;
+        width: 30%;
+        color: white;
+        border-radius: 0 5px 5px 0;
+      }
+      .right::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        height: 90px;
+        border-left: 2rpx dashed #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="coupon-list">
+        <div class="wrapper">
+          <div class="left">
+            我是左边1
+          </div>
+          <div class="right">
+            我是右边1
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="left">
+            我是左边2
+          </div>
+          <div class="right">
+            我是右边2
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
