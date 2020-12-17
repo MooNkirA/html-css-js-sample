@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      /*
+        原理：两个元素设置浮动，右侧自适应元素宽度使用calc函数计算
+        缺点：父元素需要清除浮动
+      */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        height: 600px;
+        width: 100%;
+      }
+      .left {
+        float: left;
+        width: 100px;
+        height: 200px;
+        background-color: red;
+      }
+      .right {
+        float: left;
+        width: calc(100% - 100px);
+        height: 400px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left">
+        <span> 123adadadddddddddddddddddddddddddddddddddddddddd </span>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

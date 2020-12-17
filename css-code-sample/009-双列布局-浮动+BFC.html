@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      /*
+        原理：父元素设置溢出：隐藏，左侧定宽元素浮动，右侧自适应元素设置溢出：自动创建BFC
+        缺点：前端元素的内容如果超过设定宽度会重叠到右侧元素上。
+      */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        height: 600px;
+        width: 100%;
+        overflow: hidden;
+      }
+      .left {
+        float: left;
+        width: 100px;
+        height: 200px;
+        background-color: red;
+      }
+      .right {
+        overflow: auto;
+        height: 400px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left">111111111111111111111111</div>
+      <div class="right">111111111111111111111111111111111111111111111</div>
+    </div>
+    <!-- <div class="right"></div> -->
+  </body>
+</html>

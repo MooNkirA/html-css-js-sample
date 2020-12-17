@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      /*
+        原理：两个元素都设置dislpay：inline-block，为了消除HTML空间的影响，父元素的字体大小需要设置为0，
+        正确匹配元素的宽度使用计算函数计算。如果两个元素的高度不一样，可以给元素设置vertical-align：top调整。
+        缺点：由于父元素设置了font-size为0，子元素内文字不会显示。
+      */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        height: 600px;
+        width: 100%;
+        font-size: 0;
+      }
+      .left {
+        display: inline-block;
+        width: 100px;
+        height: 200px;
+        background-color: red;
+        vertical-align: top;
+      }
+      .right {
+        display: inline-block;
+        width: calc(100% - 100px);
+        height: 400px;
+        background-color: blue;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left">
+        <span>1234</span>
+      </div>
+      <div class="right">
+        <span>1234</span>
+      </div>
+    </div>
+  </body>
+</html>
