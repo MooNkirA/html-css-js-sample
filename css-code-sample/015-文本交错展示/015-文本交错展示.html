@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>文本交错展示</title>
+    <link rel="stylesheet" href="./015.css" type="text/css" />
+    <script>
+      window.onload = () => {
+        let duration = 0.8
+        let delay = 0.3
+        let revealText = document.querySelector(".reveal")
+        let letters = revealText.textContent.split("")
+        revealText.textContent = ""
+        let middle = letters.filter((e) => e !== " ").length / 2
+        letters.forEach((letter, i) => {
+          let span = document.createElement("span")
+          span.textContent = letter
+          span.style.animationDelay = `${delay + Math.abs(i - middle) * 0.1}s`
+          revealText.append(span)
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <!--
+      一般我们都是从第一个元素开始交错的。但如果要从中间元素开始交错的话，就要给当前元素的延时各加上一个值，
+      这个值就是中间元素的下标到当前元素的下标的距离（也就是下标之差的绝对值）与步长的乘积，
+      即：delay + Math.abs(i - middle) * step，其中中间元素的下标middle = letters.filter(e => e !== "").length / 2
+     -->
+    <div class="reveal">sword art online</div>
+  </body>
+</html>

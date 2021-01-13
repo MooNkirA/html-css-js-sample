@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS分割文本实现渐渐加载</title>
+    <link rel="stylesheet" href="./014.css" type="text/css" />
+    <script>
+      window.onload = () => {
+        let landInTexts = document.querySelectorAll(".landIn")
+        landInTexts.forEach((landInText) => {
+          let letters = landInText.textContent.split("")
+          landInText.textContent = ""
+          letters.forEach((letter, i) => {
+            let span = document.createElement("span")
+            span.textContent = letter
+            span.style.animationDelay = `${i * 0.05}s`
+            landInText.append(span)
+          })
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 用JS将句子或单词分割成字母，并给每个字母加上不同延时的动画，同样也很华丽。 -->
+    <p class="landIn">
+      Ano hi watashitachi mada shiranai no Fushigi no monogatari desu.
+    </p>
+  </body>
+</html>
