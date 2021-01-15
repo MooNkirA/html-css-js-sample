@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>todo list</title>
+    <link rel="stylesheet" href="./020.css" type="text/css" />
+  </head>
+  <body>
+    <!--
+      提示：这里最好将input作为label的子元素，这样用户点击label时就能传到input上
+      默认的input太丑怎么办？那就把它先抹掉，用appearance: none或opacity: 0都可以
+      然后，利用兄弟选择符~来定制和input相邻的所有元素（+号也行，只不过只能选中最近的元素），
+      例如可以用伪元素生成一个新的方框代替原先的input，利用伪类:checked和动画来表示它被勾选后的状态，本质上还是障眼法哦~
+     -->
+    <form>
+      <fieldset class="todo-list">
+        <legend class="todo-list__title">My Special Todo List</legend>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Make awesome CSS animation</span>
+        </label>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Watch awesome bangumi</span>
+        </label>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Encounter awesome people</span>
+        </label>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Be an awesome man</span>
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>

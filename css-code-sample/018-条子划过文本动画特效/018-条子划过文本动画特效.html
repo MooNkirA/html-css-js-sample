@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>条子划过文本动画特效</title>
+    <link rel="stylesheet" href="./018.css" type="text/css" />
+  </head>
+  <body>
+    <!--
+      伪元素就是在原先的元素基础上插入额外的元素，而且这个元素不充当HTML的标签，这样就能保持HTML结构的整洁。
+      每个元素都有::before和::after这两个伪元素，也就是说每个元素都提供了3个矩形（元素本身1个，伪元素2个）来供我们进行形状的绘制。
+      现在又有了clip-path这个属性，几乎任意的形状都可以被绘制出来，全凭你的想象力
+      下面就是条子划过文本的动画，条子就是每个文本所对应的伪元素，对每个文本和其伪元素应用动画，就能达到上图的效果了
+     -->
+     <header>
+      <h1 class="title slide-bar">I'm alphardex.</h1>
+      <p class="subtitle slide-bar">A CSS Wizard</p>
+    </header>
+  </body>
+</html>
