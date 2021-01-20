@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>遮罩</title>
+    <link rel="stylesheet" href="./023.css" type="text/css" />
+  </head>
+  <body>
+    <!--
+      如果给box-shadow的扩张半径设定足够大的值，可以用它来遮住背景，而无需额外的div元素
+     -->
+    <input type="checkbox" id="burger-toggle" />
+    <label for="burger-toggle" class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <div class="overlay"></div>
+  </body>
+</html>

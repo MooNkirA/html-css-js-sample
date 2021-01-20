@@ -1,0 +1,130 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: #eceffc;
+}
+
+#burger-toggle {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  opacity: 0;
+}
+
+#burger-toggle:checked ~ .overlay {
+  opacity: 1;
+  -webkit-transform: scale(160);
+          transform: scale(160);
+}
+
+#burger-toggle:checked ~ .burger-menu .line:nth-child(1) {
+  -webkit-transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
+          transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
+}
+
+#burger-toggle:checked ~ .burger-menu .line:nth-child(2) {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+#burger-toggle:checked ~ .burger-menu .line:nth-child(3) {
+  -webkit-transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
+          transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
+}
+
+.burger-menu {
+  --burger-menu-radius: 4em;
+  position: relative;
+  z-index: 100;
+  display: block;
+  width: var(--burger-menu-radius);
+  height: var(--burger-menu-radius);
+  background: white;
+  border: solid 2px rgba(149, 166, 167, 0.4);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.burger-menu .line {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: rgba(43, 61, 79, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.burger-menu .line:nth-child(1) {
+  top: 30%;
+}
+
+.burger-menu .line:nth-child(2) {
+  top: 50%;
+}
+
+.burger-menu .line:nth-child(3) {
+  top: 70%;
+}
+
+.burger-menu .line::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2980b9;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.burger-menu .line:nth-child(2)::after {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.burger-menu .line:nth-child(3)::after {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.burger-menu:hover {
+  -webkit-box-shadow: 0.4px 0.4px 0.8px rgba(0, 0, 0, 0.042), 1px 1px 2px rgba(0, 0, 0, 0.061), 1.9px 1.9px 3.8px rgba(0, 0, 0, 0.075), 3.4px 3.4px 6.7px rgba(0, 0, 0, 0.089), 6.3px 6.3px 12.5px rgba(0, 0, 0, 0.108), 15px 15px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.4px 0.4px 0.8px rgba(0, 0, 0, 0.042), 1px 1px 2px rgba(0, 0, 0, 0.061), 1.9px 1.9px 3.8px rgba(0, 0, 0, 0.075), 3.4px 3.4px 6.7px rgba(0, 0, 0, 0.089), 6.3px 6.3px 12.5px rgba(0, 0, 0, 0.108), 15px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.burger-menu:hover .line::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.overlay {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: rgba(40, 127, 184, 0.9);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  will-change: transform;
+}
+/*# sourceMappingURL=023.css.map */

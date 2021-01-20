@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>跳动的loading伪3D文本</title>
+    <link rel="stylesheet" href="./027.css" type="text/css" />
+    <script>
+      window.onload = () => {
+        let loading = document.querySelector(".loading")
+        let letters = loading.textContent.split("")
+        loading.textContent = ""
+        letters.forEach((letter, i) => {
+          let span = document.createElement("span")
+          span.textContent = letter
+          span.style.animationDelay = `${i / 10}s`
+          loading.append(span)
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div class="loading">Loading</div>
+  </body>
+</html>

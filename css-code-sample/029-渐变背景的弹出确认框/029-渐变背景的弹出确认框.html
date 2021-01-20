@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>渐变背景的弹出确认框</title>
+    <link rel="stylesheet" href="./029.css" type="text/css" />
+  </head>
+  <body>
+    <!--
+      gradient 渐变可以作为背景图片的一种，具有很强的色彩效果，甚至可以用来模拟光
+      linear-gradient 线性渐变
+      此demo用到了HTML的dialog标签，渐变背景，动画以及overflow障眼法
+     -->
+    <dialog id="confirm-modal" class="modal">
+      <div class="modal-content">
+        <svg
+          t="1574164208713"
+          class="model-icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="5819"
+          width="63"
+          height="63"
+        >
+          <path
+            d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0zM512 877.714286c-40.228571 0-73.142857-32.914286-73.142857-73.142857s32.914286-73.142857 73.142857-73.142857 73.142857 32.914286 73.142857 73.142857S552.228571 877.714286 512 877.714286zM585.142857 512c0 40.228571-32.914286 73.142857-73.142857 73.142857s-73.142857-32.914286-73.142857-73.142857L438.857143 219.428571c0-40.228571 32.914286-73.142857 73.142857-73.142857s73.142857 32.914286 73.142857 73.142857L585.142857 512z"
+            p-id="5820"
+            fill="white"
+          ></path>
+        </svg>
+        <h2 class="modal-title">Are you sure?</h2>
+        <p class="modal-description">You can't undo this action.</p>
+        <div class="modal-options">
+          <button
+            class="btn btn-round btn-fill btn-fill-left option confirm"
+            data-text="Yes"
+            onclick="document.querySelector('#confirm-modal').close()"
+          ></button>
+          <button
+            class="btn btn-round btn-fill btn-fill-right option cancel"
+            data-text="No"
+            onclick="document.querySelector('#confirm-modal').close()"
+          ></button>
+        </div>
+      </div>
+    </dialog>
+    <form action="javascript:void(0);">
+      <button
+        class="btn btn-danger"
+        onclick="document.querySelector('#confirm-modal').showModal()"
+      >
+        Delete history
+      </button>
+    </form>
+  </body>
+</html>
