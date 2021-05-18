@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>可选链操作符 示例</title>
+  </head>
+
+  <body>
+    <script>
+      const adventurer = {
+        name: "Alice",
+        cat: {
+          name: "Dinah",
+        },
+      };
+
+      const dogName = adventurer.dog?.name;
+      console.log(dogName);
+      // expected output: undefined
+
+      const catName = adventurer.cat?.name;
+      console.log(catName);
+      // expected output: Dinah
+
+      console.log(adventurer.someNonExistentMethod?.());
+      // expected output: undefined
+    </script>
+  </body>
+</html>
