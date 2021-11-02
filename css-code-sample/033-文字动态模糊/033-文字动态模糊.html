@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>033-文字动态模糊</title>
+    <link rel="stylesheet" href="./033.css" type="text/css" />
+  </head>
+  <body>
+    <svg width="0" height="0" class="absolute">
+      <filter id="motion-blur" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="100 0" in="SourceGraphic" result="blur">
+          <animate
+            dur="0.6s"
+            attributeName="stdDeviation"
+            from="100 0"
+            to="0 0"
+            fill="freeze"
+          ></animate>
+        </feGaussianBlur>
+      </filter>
+    </svg>
+    <div class="flex flex-col items-center space-y-4">
+      <div class="motion-blur text-5xl font-bold">Motion Blur Horizontal</div>
+      <div class="motion-blur slide-in-left text-5xl font-bold">
+        Motion Blur Left
+      </div>
+      <div class="motion-blur slide-in-right text-5xl font-bold">
+        Motion Blur Right
+      </div>
+    </div>
+  </body>
+</html>

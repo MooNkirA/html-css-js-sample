@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>rotate 旋转</title>
+        <style>
+            body {
+                perspective: 500px;
+            }
+
+            img {
+                display: block;
+                margin: 100px auto;
+                transition: all 1s;
+            }
+
+            img:hover {
+                /* 语法 */
+                /* transform: rotate3d(x,y,z,deg); */
+
+                /* 沿X轴旋转 */
+                /* transform: rotate3d(1, 0, 0, 45deg); */
+
+                /* 沿Y轴旋转 */
+                /* transform: rotate3d(0, 1, 0, 45deg); */
+
+                /* 沿X、Y轴的矢量方向旋转，即对角线 */
+                transform: rotate3d(1, 1, 0, 45deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="images/pig.jpg" alt="" />
+    </body>
+</html>
