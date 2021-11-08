@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>flex-direction 主轴方向</title>
+        <style>
+            h1 {
+                font: bold 20px/1.5 georgia, simsun, sans-serif;
+            }
+            .box {
+                display: -webkit-flex;
+                /* 给父级添加flex属性 */
+                display: flex;
+                margin: 0;
+                padding: 10px;
+                list-style: none;
+                background-color: pink;
+            }
+            .box li {
+                width: 100px;
+                height: 100px;
+                border: 1px solid #aaa;
+                background-color: #fff;
+                text-align: center;
+                margin: 5px;
+            }
+            #box {
+                /* 默认值是row 水平排列， 即主轴是 x 轴，侧轴是 y 轴
+                   元素是跟着主轴来排列的
+                */
+                -webkit-flex-direction: row;
+                flex-direction: row;
+            }
+            #box2 {
+                /* 水平排列方向翻转 */
+                -webkit-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+            }
+            #box3 {
+                height: 500px;
+                /* 垂直排列，即主轴设置为 y 轴 则侧轴变成 x 轴 */
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+            #box4 {
+                height: 500px;
+                /* 垂直排列方向翻转 */
+                -webkit-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>flex-direction示例：</h1>
+        <h2>flex-direction:row</h2>
+        <p>主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）</p>
+        <ul id="box" class="box">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <h2>flex-direction:row-reverse</h2>
+        <p>对齐方式与row相反</p>
+        <ul id="box2" class="box">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <h2>flex-direction:column</h2>
+        <p>主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）</p>
+        <ul id="box3" class="box">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <h2>flex-direction:column-reverse</h2>
+        <p>对齐方式与column相反</p>
+        <ul id="box4" class="box">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    </body>
+</html>

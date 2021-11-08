@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>emmet 语法示例</title>
+    </head>
+    <body>
+        <!-- 生成带id的元素 div#test -->
+        <div id="test"></div>
+
+        <!-- 生成带class的元素 div.test -->
+        <div class="test"></div>
+
+        <!-- 生成父子关系元素 div>ul>li>p -->
+        <div>
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 生成兄弟元素 div+ul+p -->
+        <div></div>
+        <ul></ul>
+        <p></p>
+
+        <!-- 生成上级元素 div>ul>li^div 
+            这里的^是接在li后面所以在li的上一级，与ul成了兄弟关系，当然两个^^就是上上级
+        -->
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+            <div></div>
+        </div>
+
+        <!-- 生成重复元素 div*5 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <!-- 分组分成元素 div>(ul>li>a)+div>p 
+            （)括号里面的内容为一个代码块，表示与括号内部嵌套和外面的的层级无关
+        -->
+        <div>
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+            <div>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- 生成带属性元素 a[href='###' name='xiaoA'] 
+            中括号内填写属性键值对的形式，并且空格隔开
+        -->
+        <a href="###" name="xiaoA"></a>
+
+        <!-- 生成的元素类名是有顺序的 ul>li.test$*3 -->
+        <ul>
+            <li class="test1"></li>
+            <li class="test2"></li>
+            <li class="test3"></li>
+        </ul>
+        <!-- 生成元素类名从指定的数值开始自增 ul>li.test$@3*3 -->
+        <ul>
+            <li class="test3"></li>
+            <li class="test4"></li>
+            <li class="test5"></li>
+        </ul>
+        
+        <!-- 生成带文本元素 ul>li.test$*3{测试$} -->
+        <ul>
+            <li class="test1">测试1</li>
+            <li class="test2">测试2</li>
+            <li class="test3">测试3</li>
+        </ul>
+
+        <!-- .test -->
+        <div class="test"></div>
+        <!-- li：可在ul 和 ol 中使用 例如：ul>.test$*3 -->
+        <ul>
+            <li class="test1"></li>
+            <li class="test2"></li>
+            <li class="test3"></li>
+        </ul>
+        <!-- option：可在select中使用 例如：select>.test$*5 -->
+        <select name="" id="">
+            <option class="test1"></option>
+            <option class="test2"></option>
+            <option class="test3"></option>
+            <option class="test4"></option>
+            <option class="test5"></option>
+        </select>
+    </body>
+</html>

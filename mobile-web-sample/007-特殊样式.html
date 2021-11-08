@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>特殊样式</title>
+        <style>
+            a {
+                /* 点击会出现高亮，需要清除清除 设置为transparent 完成透明 */
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input {
+                /* 在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式 */
+                -webkit-appearance: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="#">MooN</a>
+        <input type="button" value="按钮" />
+    </body>
+</html>
