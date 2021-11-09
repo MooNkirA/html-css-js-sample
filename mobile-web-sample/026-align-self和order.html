@@ -4,24 +4,32 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>flex设置子元素是否换行(flex-wrap)</title>
+        <title>align-self和order</title>
         <style>
             div {
                 display: flex;
-                width: 600px;
-                height: 400px;
+                width: 80%;
+                height: 300px;
                 background-color: pink;
-                /* flex布局中，默认的子元素是不换行的，如果父元素装不上子元素，会缩小子元素的宽度，放到父元素里面  */
-                /* flex-wrap: nowrap; */
-                flex-wrap: wrap;
+                /* 让三个子盒子沿着侧轴底侧对齐 */
+                /* align-items: flex-end; */
             }
 
             div span {
                 width: 150px;
                 height: 100px;
                 background-color: purple;
-                color: #fff;
-                margin: 10px;
+                margin-right: 5px;
+            }
+
+            div span:nth-child(2) {
+                /* 默认是0   -1比0小所以在前面 */
+                order: -1;
+            }
+
+            div span:nth-child(3) {
+                /* 让3号盒子下来底侧 */
+                align-self: flex-end;
             }
         </style>
     </head>
@@ -31,8 +39,6 @@
             <span>1</span>
             <span>2</span>
             <span>3</span>
-            <span>4</span>
-            <span>5</span>
         </div>
     </body>
 </html>
